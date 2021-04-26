@@ -13,6 +13,11 @@ void Monster::WeaponAttack(Entity *target)
     Attack(target, this->weapon_damage, "WeaponAttack");
 }
 
+void Monster::Growl(Entity *target)  //what im adding
+{
+    Attack(target, GetStrength() * 0.5, "Growl");
+}
+
 void Monster::OutputStatus() const
 {
     std::cout << this->Race() << ": " << this->Name()
@@ -26,6 +31,11 @@ void Monster::UseAction(Entity * target, const std::string& spellName, const std
     if(spellName == "weapon_attack")
     {
         WeaponAttack(target);
+        return;
+    }
+    if(spellName == "growl")  //what im adding
+    {
+        Growl(target);
         return;
     }
     

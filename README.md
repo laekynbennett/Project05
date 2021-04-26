@@ -1,1 +1,2 @@
 # Project05
+My plan right now is to add an ability to the Monster. I want to add the ability "Growl" which is basically the monster attacking by growling directly at the target. I will have to modify the monster.cpp and monster.hpp files. I may end up adding another ability to monster also if I am able to. 
