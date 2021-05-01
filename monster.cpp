@@ -23,6 +23,11 @@ void Monster::Crush(Entity *target) //what im adding
     Attack(target, GetStrength() * 2.0, "Crush");
 }
 
+void Monster::Chomp(Entity *target)
+{
+    Attack(target, GetStrength() * 2.0, "Chomp");
+}
+
 void Monster::OutputStatus() const
 {
     std::cout << this->Race() << ": " << this->Name()
@@ -46,6 +51,11 @@ void Monster::UseAction(Entity * target, const std::string& spellName, const std
     if(spellName == "crush") //what im adding
     {
         Crush(target);
+        return;
+    }
+    if(spellName == "chomp")
+    {
+        Chomp(target);
         return;
     }
     

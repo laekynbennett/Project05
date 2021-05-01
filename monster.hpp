@@ -11,6 +11,7 @@ private:
     uint32_t weapon_damage;
     void Growl(Entity * target);  //what im adding
     void Crush(Entity * target);
+    void Chomp(Entity * target);
 
 public:
     Monster(JsonEntityBuilder &builder, JsonItemBuilder & inventory, uint32_t uid);
